@@ -14,7 +14,15 @@ pipeline {
             // bat "mvn -Dmaven.test.failure.ignore=true clean package"
          }
 
-         post {
+         
+      }
+	  stage('Post Build')
+		steps {
+		
+		 echo ("Lol second post build")
+		
+		}
+	  post {
             // If Maven was able to run the tests, even if some of the test
             // failed, record the test results and archive the jar file.
             success {
@@ -23,9 +31,5 @@ pipeline {
              //  archiveArtifacts 'target/*.jar'
             }
          }
-      }
-	  stage('Post Build')
-	 { echo ("Lol second post build")
-	  }
    }
 }
