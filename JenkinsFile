@@ -25,7 +25,7 @@ pipeline {
          }
       }
 	  stage('Post Build')
-	  echo ("Lol second post build")
-	  
+	 { echo ("Lol second post build")
+	  }
    }
 }
